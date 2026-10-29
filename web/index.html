@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unity WebGL Game — Working Title</title><meta name="description" content="A first-person exploration game across five surreal spaces, with environmental puzzles and two endings.">
+<link rel="icon" href="TemplateData/favicon.ico"><link rel="stylesheet" href="TemplateData/style.css"><link rel="stylesheet" href="publish.css"></head>
+<body><main><header><h1>Unity WebGL Game <small>Working title</small></h1><p>Explore five surreal spaces, solve environmental puzzles, and discover two endings.</p></header>
+<div id="unity-container" class="unity-desktop"><div id="unity-fullscreen-container">
+<canvas id="unity-canvas" width="1280" height="720" tabindex="0" aria-label="Game window"></canvas>
+<div id="start-panel"><p>Desktop keyboard and mouse · Initial download approximately 667 MiB</p><button id="start-game" type="button">Load game</button><p>Your browser may need a moment to unpack the game.</p></div>
+<div id="unity-loading-container" hidden><div id="unity-loading-bar"><div id="unity-logo"></div><div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div><p id="load-status" role="status">Loading… 0%</p></div></div>
+</div><div id="unity-warning" role="alert"></div><div class="game-toolbar"><span id="play-status">Load the game, then click inside it to capture the mouse.</span><button id="fullscreen" type="button" disabled>Fullscreen</button></div></div>
+<footer><p><b>WASD</b> Move · <b>Mouse</b> Look · <b>E</b> Interact / read · <b>F</b> Place a carried crystal · <b>Esc</b> Close a panel / release the mouse</p><p>After loading, click the game to begin looking around. Desktop browsers only; no mobile or WebXR controls.</p></footer></main>
+<script src="publish.js"></script></body></html>

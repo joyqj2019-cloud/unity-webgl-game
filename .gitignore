@@ -1,0 +1,19 @@
+# Never commit Unity sources, builds, archives, or local credentials.
+Site/
+Build/
+Library/
+Temp/
+Obj/
+Logs/
+Assets/
+ProjectSettings/
+UserSettings/
+*.zip
+*.unityweb
+*.wasm
+*.data
+*.log
+.env
+.env.*
+_site/
+__pycache__/
