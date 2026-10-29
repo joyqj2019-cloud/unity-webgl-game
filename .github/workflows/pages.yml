@@ -25,6 +25,18 @@ jobs:
           asset=$(python -c 'import json; print(json.load(open("release.json"))["asset"])')
           gh release download "$tag" --repo "$GH_REPO" --pattern "$asset" --dir "$RUNNER_TEMP/web-release"
           python scripts/verify-package.py --archive "$RUNNER_TEMP/web-release/$asset" --config release.json --extract _site
+          # Apply the repository's current page copy without repacking Unity binaries.
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          page = Path('web/index.html').read_bytes()
+          Path('_site/index.html').write_bytes(page)
+          manifest_path = Path('_site/release-manifest.json')
+          manifest = json.loads(manifest_path.read_text())
+          manifest['gameTitle'] = 'The Unknown Place'
+          manifest['files']['index.html'] = {'bytes': len(page), 'sha256': hashlib.sha256(page).hexdigest()}
+          manifest_path.write_text(json.dumps(manifest, indent=2))
+          PY
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
