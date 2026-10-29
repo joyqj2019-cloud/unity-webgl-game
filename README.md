@@ -6,6 +6,8 @@ The title is temporary. This repository contains release/deployment files only; 
 
 ## Play
 
+**[Play in your browser](https://joyqj2019-cloud.github.io/unity-webgl-game/)**
+
 The GitHub Pages site is published by the **Deploy tested WebGL release** workflow after a tested release archive has been uploaded.
 
 Designed for desktop browsers with a keyboard and mouse. The initial download is approximately **667 MiB**; allow time for downloading and unpacking.
