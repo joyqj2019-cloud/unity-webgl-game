@@ -1,7 +1,7 @@
 {
-  "tag": "web-2026-10-30-mouse-delta-fix",
-  "asset": "unity-webgl-game-web-20261030.zip",
-  "sha256": "da3208bbeb9e67fc256163b3689e6cf23915c3e10845a8ee0087ad590c55aeae",
-  "siteBytes": 699516826,
-  "build": "MouseDeltaFilter01"
+  "tag": "web-2026-10-30-restart-experience",
+  "asset": "unity-webgl-game-web-20261030-restart-experience.zip",
+  "sha256": "3f45ed50aa3911bf7685539cbf141159e0b6ab778f96f974924451f5b044f812",
+  "siteBytes": 702394349,
+  "build": "web-2026-10-30-restart-experience"
 }

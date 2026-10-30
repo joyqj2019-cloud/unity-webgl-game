@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory() as temp:
  for f in ['index.html','publish.css','publish.js']:shutil.copyfile(repo/'web'/f,site/f)
  (site/'.nojekyll').write_text('')
  files={str(f.relative_to(site)).replace('\\','/'):{'bytes':f.stat().st_size,'sha256':sha(f)} for f in site.rglob('*') if f.is_file() and f.name!='release-manifest.json'}
- (site/'release-manifest.json').write_text(json.dumps({'build':a.tag,'gameTitle':'Unity WebGL Game (Working Title)','compression':'Unity Gzip with Decompression Fallback','files':files},indent=2))
+ (site/'release-manifest.json').write_text(json.dumps({'build':a.tag,'gameTitle':'The Unknown Place','compression':'Unity Gzip with Decompression Fallback','files':files},indent=2))
  total=sum(f.stat().st_size for f in site.rglob('*') if f.is_file());assert total<1_000_000_000,'Site exceeds Pages limit'
  archive.parent.mkdir(parents=True,exist_ok=True)
  with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_STORED,allowZip64=True) as z:
